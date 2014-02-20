@@ -1,12 +1,7 @@
 <!DOCTYPE HTML>
-<!--
-    Escape Velocity 2.5 by HTML5 UP
-    html5up.net | @n33co
-    Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
 <html>
     <head>
-        <title>Escape Velocity by HTML5 UP</title>
+        <title>Comunidad Symfony Barcelona</title>
         <meta http-equiv="content-type" content="text/html; charset=utf-8" />
         <meta name="description" content="" />
         <meta name="keywords" content="" />
@@ -16,11 +11,20 @@
             <link rel="stylesheet" href="css/style.css" />
             <link rel="stylesheet" href="css/style-desktop.css" />
         </noscript>
+
+        <!--[if lte IE 8]><script src="js/html5shiv.js"></script><link rel="stylesheet" href="css/ie8.css" /><![endif]-->
+        <script src="js/jquery.min.js"></script>
+        <script src="js/jquery.dropotron.min.js"></script>
+        <script src="js/config.js"></script>
+        <script src="js/skel.min.js"></script>
+        <script src="js/skel-panels.min.js"></script>
+        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
     </head>
     <body class="homepage">
 
         <!-- Header Wrapper -->
-            <div name="inicio" id="header-wrapper" class="wrapper">
+            <div id="header-wrapper" class="wrapper">
+                <a name="inicio"></a>
                 <div class="container">
                     <div class="row">
                         <div class="12u">
@@ -31,7 +35,7 @@
                                     <!-- Logo -->
                                         <div id="logo">
                                             <h1><a href="#">Symfony Barcelona</a></h1>
-                                            <span class="byline">Grupo de desarrolladores Symfony en Barcelona y cercanias</span>
+                                            <span class="byline">Grupo de desarrolladores Symfony en Barcelona y alrededores</span>
                                             <div style="margin-top:10px"><a href="https://twitter.com/share" class="twitter-share-button" data-count="none" data-size="large">Tweet</a></div>
                                         </div>
                                     <!-- /Logo -->
@@ -41,6 +45,7 @@
                                             <ul>
                                                 <li><a href="#inicio">Inicio</a></li>
                                                 <li><a href="#evento">Evento</a></li>
+                                                <li><a href="#ponencias">Ponencias</a></li>
                                                 <li><a href="#comunidad">Comunidad</a></li>
                                             </ul>
                                         </nav>
@@ -55,9 +60,34 @@
             </div>
         <!-- /Header Wrapper -->
 
+        <!-- Intro Wrapper -->
+            <div id="intro-wrapper" class="wrapper wrapper-style1">
+                <a name="evento"></a>
+                <div class="title">Evento</div>
+                <div class="container">
+                    <div class="row">
+                        <div class="12u">
+
+                            <!-- Intro -->
+                                <section id="intro">
+                                    <p class="style1">Grizzly 72 Sports Bar</p>
+                                    <p class="style1"><strong>17 de Marzo</strong> de 2014<br>A partir de las <strong>19:00</strong></p>
+                                    <p class="style2" style="padding: 20px">
+                                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2993.493541505456!2d2.1628502!3d41.385087!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a4a28b6e123f5f%3A0x767ce721525403d!2sGrizzly+72+Sports+Bar!5e0!3m2!1sca!2ses!4v1392893990951" width="100%" height="300px" frameborder="0" style="border:0"></iframe>
+                                    </p>
+                                </section>
+                            <!-- /Intro -->
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <!-- /Intro Wrapper -->
+
         <!-- Main Wrapper -->
             <div class="wrapper wrapper-style2">
-                <div name="evento" class="title">Evento</div>
+                <a name="ponencias"></a>
+                <div class="title">Ponencias</div>
                 <div class="container">
                     <div class="row">
                         <div class="12u">
@@ -67,27 +97,25 @@
 
                                     <!-- Features -->
                                         <section id="features">
-                                            <header class="style1">
-                                                <h2>Próximo evento</h2>
-                                                <p class="byline">Grizzly 72 Sports Bar<br><strong>17 de Marzo</strong> de 2014<br>A partir de las <strong>19:00</strong></p>
-                                            </header>
                                             <div class="feature-list">
                                                 <div>
                                                     <div class="row">
                                                         <div class="6u">
                                                             <section>
-                                                                <h3 class="fa fa-lock">SSL and Symfony2</h3>
+                                                                <h3 class="fa fa-lock">SSL y Symfony2</h3>
                                                                 <p><a href="https://github.com/acasademont">Albert Casademont</a></p>
                                                                 <p>19:00 - 20:00</p>
-                                                                <p>Eget mattis at, laoreet vel et velit aliquam diam ante, aliquet sit amet vulputate. Eget mattis at, laoreet vel velit lorem.</p>
+                                                                <p>Todo el mundo asocia SSL a conexión web segura. ¿Pero qué hay exactamente detrás de esas siglas? ¿Cómo funciona? ¿Es cierto que mi web irá mucho más lenta? ¿Vale la pena?</p>
+                                                                <p>Hablaremos de algoritmos de cifrado, claves públicas y privadas, performance y, como no, de cómo integrarlo todo en nuestro framework favorito.</p>
                                                             </section>
                                                         </div>
                                                         <div class="6u">
                                                             <section>
                                                                 <h3 class="fa fa-search">Symfony y Elastic Search</h3>
                                                                 <p><a href="https://github.com/mrzard">Gonzalo Miguez</a></p>
-                                                                <p>21:00 - 21:00</p>
-                                                                <p>Eget mattis at, laoreet vel et velit aliquam diam ante, aliquet sit amet vulputate. Eget mattis at, laoreet vel velit lorem.</p>
+                                                                <p>20:00 - 21:00</p>
+                                                                <p>Veremos cómo hacer una implementación rápida de ElasticSearch para nuestra aplicación Symfony2.</p>
+                                                                <p>Introducción rápida a ElasticSearch. Cómo interactúa <a href="https://github.com/FriendsOfSymfony/FOSElasticaBundle">FOSElasticaBundle</a> con nuestros modelo. Cómo personalizar qué información enviamos a ES. Buenas prácticas a la hora de buscar, indexar, analizar y retornar resultados.</p>
                                                             </section>
                                                         </div>
                                                     </div>
@@ -96,23 +124,23 @@
                                                             <section>
                                                                 <h3 class="fa fa-shopping-cart">Payment Suite</h3>
                                                                 <p><a href="https://github.com/dpcat237">Denys Pasishnyi</a></p>
-                                                                <p>21:00 - 21:00</p>
-                                                                <p>Eget mattis at, laoreet vel et velit aliquam diam ante, aliquet sit amet vulputate. Eget mattis at, laoreet vel velit lorem.</p>
+                                                                <p>21:00 - 21:15</p>
+                                                                <p>Presentación del proyecto <a href="https://github.com/PaymentSuite">PaymentSuite</a>, una implementación basada en Symfony2 para las plataformas de pago.</p>
                                                             </section>
                                                         </div>
                                                         <div class="6u">
                                                             <section>
                                                                 <h3 class="fa fa-cog">AdminGeneratorBundle</h3>
                                                                 <p><a href="https://github.com/neoshadybeat">Cayetano Soriano</a></p>
-                                                                <p>21:00 - 21:00</p>
-                                                                <p>Eget mattis at, laoreet vel et velit aliquam diam ante, aliquet sit amet vulputate. Eget mattis at, laoreet vel velit lorem.</p>
+                                                                <p>21:15 - 21:30</p>
+                                                                <p>Genera tu backoffice de forma automática con <a href="https://github.com/symfony2admingenerator/AdmingeneratorGeneratorBundle">AdminGeneratorBundle</a>, una herramienta basada en Symfony2.</p>
                                                             </section>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
                                             <ul class="actions actions-centered">
-                                                <li><a href="#" class="button button-style1 button-big">Apuntate</a></li>
+                                                <li><a href="#" class="button button-style1 button-big">Quiero ir!</a></li>
                                             </ul>
                                         </section>
                                     <!-- /Features -->
@@ -215,7 +243,7 @@
                             <!-- Intro -->
                                 <section id="intro">
                                     <p class="style2" style="padding: 20px">
-                                        PHP is probably not the best language out there, and I'm the first one to scream about its quirks, but PHP is the best web platform... ever.</a>
+                                        PHP is probably not the best language out there, and I'm the first one to scream about its quirks, but PHP is the best web platform... ever.
                                     </p>
                                     <p class="style1">Fabien Potencier</p>
                                 </section>
@@ -229,7 +257,8 @@
 
 
         <!-- Footer Wrapper -->
-            <div name="comunidad" id="footer-wrapper" class="wrapper">
+            <div id="footer-wrapper" class="wrapper">
+                <a name="comunidad"></a>
                 <div class="title">Comunidad</div>
                 <div class="container">
                     <div class="row">
@@ -315,13 +344,5 @@
                 </div>
             </div>
         <!-- /Footer Wrapper -->
-
-        <!--[if lte IE 8]><script src="js/html5shiv.js"></script><link rel="stylesheet" href="css/ie8.css" /><![endif]-->
-        <script src="js/jquery.min.js"></script>
-        <script src="js/jquery.dropotron.min.js"></script>
-        <script src="js/config.js"></script>
-        <script src="js/skel.min.js"></script>
-        <script src="js/skel-panels.min.js"></script>
-        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
     </body>
 </html>
