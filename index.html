@@ -332,5 +332,17 @@
                 </div>
             </div>
         <!-- /Footer Wrapper -->
+        
+        <script type="text/javascript">
+        
+            $(document).ready(function(){
+                $("#nav a").click(function(e) { 
+                    var scrollto = ($(this).attr("href")).replace("#",""); 
+                    $("body, html").animate({ scrollTop: $("a[name="+scrollto+"]").offset().top });
+                    e.preventDefault();
+                });
+            });
+            
+        </script>
     </body>
 </html>
