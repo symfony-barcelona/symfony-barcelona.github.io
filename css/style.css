@@ -331,13 +331,13 @@
 
 		.button-style1
 		{
-			background: #e97770 url('images/overlay.png');
+			background: #387CD3 url('images/overlay.png');
 			color: #fff;
 		}
 
 			.button-style1:hover
 			{
-				background-color: #f98780;
+				background-color: #68A2EB;
 			}
 			
 			.button-style1:active
