@@ -336,12 +336,41 @@
         
         <script type="text/javascript">
         
-            $(document).ready(function(){
-                $("#nav a").click(function(e) { 
-                    var scrollto = ($(this).attr("href")).replace("#",""); 
-                    $("body, html").animate({ scrollTop: $("a[name="+scrollto+"]").offset().top });
+            $(function(){
+
+                $("#nav a").on('click', (function(e) { 
+                    
+                    e.stopPropagation();
                     e.preventDefault();
-                });
+
+                    var hash = ($(this).attr("href")); 
+                    var scrollto = hash.replace("#","");                                     
+
+                    // we need to apply the animation to both "html" and "body"
+                    // elements for browser compatibility
+                    $("body, html").animate(
+
+                            { scrollTop: $("a[name="+scrollto+"]").offset().top }
+
+                        ).promise().done(function() {
+
+                            // we are actually assigning two event handlers, one for the "html" 
+                            // and another for the "body" element. Animate()'s "success"
+                            // callback will be called twice. We can use a Promise() so that
+                            // our history change will kick in when both handlers have returned
+                            // 
+                            // see http://api.jquery.com/promise/
+                            // see http://stackoverflow.com/questions/8790752/callback-of-animate-gets-called-twice-jquery#8791175
+
+                            if (!!(window.history && history.pushState)) {
+                                // we will push a new url to the history stack
+                                // only if we support html5 history API. 
+                                // Otherwise no history is preserved upon navigating links
+                                window.history.pushState({}, "", hash);
+                            }
+                        });
+                                                                                                    
+                }));
             });
             
         </script>
